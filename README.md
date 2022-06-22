@@ -16,6 +16,11 @@ Enter the Monorepo buildpack, which is a copy of [heroku-buildpack-multi-procfil
 
 Note: If you already have other buildpacks defined, you'll need to make sure that the heroku-buildpack-monorepo buildpack is defined first. You can do this by adding `-i 1` to the `heroku buildpacks:add` command.
 
+# Using pre-build script
+
+Your application may need to run some commands before keeping only the `APP_BASE` folder (such as running a build script).
+If there is an executable file located at `APP_BASE/scripts/heroku-buildpack-monorepo-pre-build`, it will be executed before keeping only the `APP_BASE` folder.
+
 # Authors
 
 Andrew Gwozdziewycz <apg@heroku.com> and Cyril David <cyx@heroku.com> and now Lincoln Stoll <lstoll@heroku.com>
