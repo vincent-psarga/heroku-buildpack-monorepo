@@ -18,7 +18,7 @@ if [ ! -f "${ENV_DIR}/APP_BASE" ]; then
 fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
-if [ -f "${BUILD_DIR}/${APP_BASE}/scripts/heroku-buildpack-monorepo-pre-build"]; then
+if [ -f "${BUILD_DIR}/${APP_BASE}/scripts/heroku-buildpack-monorepo-pre-build" ]; then
     "${BUILD_DIR}/${APP_BASE}/scripts/heroku-buildpack-monorepo-pre-build"
 fi
 
